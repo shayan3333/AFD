@@ -4,12 +4,12 @@ The ADF contains 3 files:
 
 - us_dist_sensor.py: Uses a supersonic sensor to detect objects infront of it, if within a range for a specificed about of time, it will publish to the "record" topic to let other nodes know that the doggo is waiting to be fed!
   
-- cam_sub_node.py: Listens to the "record" topic and starts recording once it receives "true" and saves the video onto disk. It captures the frames by subscribing to the usb camera driver and stitches the frames together using opencv.
+- cam_sub_node.py: Listens to the "record" topic and starts recording once it receives "true" and saves the video locally. It captures the frames by subscribing to the usb camera driver and stitches the frames together using opencv.
   
-- dispenser_node.py: Listen to the "record" topic and activates the linear actuators through a H brdige once it reveives "true". After a small amount of time has passed, the linear actuator is retracted back.
+- dispenser_node.py: Listen to the "record" topic and activates the linear actuators through a H brdige once it receives "true". After a small amount of time has passed, the linear actuator is retracted back.
 
 ### Testing:
-- Create a package for each of the above nodes (colcon build), launch the nodes and then place objects infront of the ultrasonic sensor at variying varying distances and for varying time intervals and see how the system behaves.
+- Create a package for each of the above nodes (colcon build), launch the nodes and then place objects infront of the ultrasonic sensor at varying distances and for varying time intervals and see how the system behaves.
 - Further testing is required to optimise the time which the linear actuator extends, remains stationary and retracts depending on the geometrical properties of the ADF.
 - Final stages of testing will benefit from using a real dog interacting with the setup to finalise any required improvements.
 
