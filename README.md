@@ -16,7 +16,7 @@ The ADF contains 3 files:
 ### Assumptions and considerations:
 The assumptions and considerations have been appropriatey pointed out within the code and system diagram. Further considerations and assumptions include:
 - I didnt have access to a ROS2 environment at the time of writing this code.
-- I think there is room for improvement in several aspects of the code. Notably, I'd prefer to detect whether the dog is waiting to be fed or not using a CNN that is trained on dog faces, upon detecting the dog's face using the usb camera at a certain distance, food is dispensed. However, this might run into power supply or privacy problems.
+- I think there is room for improvement in several aspects of the code. Notably, I'd prefer to detect whether the dog is waiting to be fed or not using a CNN that is trained on dog faces, upon detecting the dog's face using the usb camera at a certain distance, food is dispensed. However, this might run into power supply (if using a battery) or privacy problems.
 - I've adhered to the limited budget available for this setup.
 - It's assumed that the linear actuator moves an attachment that blocks food and water from leaving the supply container.
 - The available Arduino kit and sensors were not used and I instead opted in for devices/solutions that were compatible with the Rasp Pi. This decision was motivated by being in my comfort zone. However, I also believe keeping everything on the same system improves robustness.
