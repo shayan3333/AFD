@@ -20,5 +20,5 @@ The assumptions and considerations have been appropriatey pointed out within the
 - I've adhered to the limited budget available for this setup.
 - It's assumed that the linear actuator moves an attachment that blocks food and water from leaving the supply container.
 - The available Arduino kit and sensors were not used and I instead opted in for devices/solutions that were compatible with the Rasp Pi. This decision was motivated by being in my comfort zone. However, I also believe keeping everything on the same system improves robustness.
-- As mentioned in the code as well, more sensors such as weight scales could be implement or more sophisticated logic could be used to improve the overall functionality of the system. However, given the suggested 3 hour time commitment, they were avoided.
+- As mentioned in the code as well, more sensors such as weight scales could be implemented or more sophisticated logic could be used to improve the overall functionality of the system. However, given the suggested 3 hour time commitment, they were avoided.
 
