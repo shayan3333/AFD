@@ -13,8 +13,8 @@ The ADF contains 3 files:
 - Further testing is required to optimise the time which the linear actuator extends, remains stationary and retracts depending on the geometrical properties of the ADF.
 - Final stages of testing will benefit from using a real dog interacting with the setup to finalise any required improvements.
 
-### Assumptions and considerations
-These have been appropriatey pointed out within the code and system diagram. Further considerations and assumptions include:
+### Assumptions and considerations:
+The assumptions and considerations have been appropriatey pointed out within the code and system diagram. Further considerations and assumptions include:
 - I didnt have access to a ROS2 environment at the time of writing this code.
 - I think there is room for improvement in several aspects of the code. Notably, I'd prefer to detect whether the dog is waiting to be fed or not using a CNN that is trained on dog faces, upon detecting the dog's face using the usb camera at a certain distance, food is dispensed. However, this might run into power supply or privacy problems.
 - I've adhered to the limited budget available for this setup.
