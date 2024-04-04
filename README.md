@@ -17,7 +17,7 @@ The ADF contains 3 files, where each fulfill a task alligned with the specified 
 - Feed mock sensor inputs and outputs.
 
 **Testing with real sensors:**
-- then place objects infront of the ultrasonic sensor at varying distances and for varying time intervals and see how the system behaves.
+- Place objects infront of the ultrasonic sensor at varying distances and for varying time intervals and see how the system behaves.
 - Further testing is required to optimise the time which the linear actuator extends, remains stationary and retracts depending on the geometrical properties of the ADF.
 - Final stages of testing will benefit from using a real dog interacting with the setup to finalise any required improvements.
 
