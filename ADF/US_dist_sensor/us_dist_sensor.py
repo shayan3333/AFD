@@ -41,7 +41,10 @@ class Dist_sensor(Node):
                 if pos_sig >= self.wait_time:
                     record_msg = String()
                     record_msg.data = "true"  # Publish "true" to indicate recording
-
+                elif (pos_sig > 0) and (record_msg.data == "true"):
+                    pos_sig += 1
+                    record_msg = String()
+                    record_msg.data = "true"  # Publish "true" to indicate not recording
                 else:
                     pos_sig +=1
                     record_msg = String()
@@ -66,13 +69,13 @@ class Dist_sensor(Node):
         time.sleep(0.00001)
         GPIO.output(self.trig, False)
         
-        start_time = time.time()
-        stop_time = time.time()
+        start_time = time.perf_counter()
+        stop_time = time.perf_counter()
 
         while GPIO.input(self.echo) == 0:
-            start_time = time.time()
+            start_time = time.perf_counter()
         while GPIO.input(self.echo) == 1:
-            stop_time = time.time()
+            stop_time = time.perf_counter()
 
         elapsed_time = stop_time - start_time
         distance = (elapsed_time * 34300) / 2  # Speed of sound in cm/s
