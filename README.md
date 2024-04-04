@@ -1,12 +1,14 @@
 # Automatic Dog Feeder
 
-The ADF contains 3 files, where each fulfill a task alligned with the specified requirements of the project:
+The ADF contains 3 .py files, where each fulfill a task alligned with the specified requirements of the project:
 
 - us_dist_sensor.py: Uses a supersonic sensor to detect objects infront of it, if within a range for a specificed about of time, it will publish to the "record" topic to let other nodes know that the doggo is waiting to be fed!
   
 - cam_sub_node.py: Listens to the "record" topic and starts recording once it receives "true" and saves the video locally. It captures the frames by subscribing to the usb camera driver and stitches the frames together using opencv.
   
 - dispenser_node.py: Listen to the "record" topic and activates the linear actuators through a H brdige once it receives "true". After a small amount of time has passed, the linear actuator is retracted back.
+
+There is also a jupyter notebook "us_dist_sensor_test.ipynb" that serves as the test case for the us_dist_sensor.py. It provides a mock distance sensor and asserts the corectness of the logic developed for the node.
 
 ### Intructions for testing the code:
 - Create a package for each of the above nodes. 
